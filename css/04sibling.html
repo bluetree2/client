@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <style>
+        p{
+            color: blue;
+        }
+
+        /* 인접한 형제 셀렉터터 */
+        h1+p{
+            background-color: gold;
+        }
+
+        /* 형제 셀렉터 */
+        h1~p{
+            border: solid 1px black;
+        }
+
+        div>p{
+            border: dotted 5px yellow;
+        }
+        p+div~p{
+            background-color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>Lorem, ipsum dolor.</p>
+    <h1>Lorem.</h1>
+    <p>Lorem, ipsum dolor.</p>
+    <p>Ut, asperiores laboriosam!</p>
+    <p>Non, in officia?</p>
+    <p>Ipsam, eligendi quis.</p>
+    <p>Ullam, cumque. Sunt?</p>
+
+    <div>
+        <!-- 아래 두 요소의 테두리를 dotted 5px yellow -->
+        <p>Lorem, ipsum dolor.</p>
+        <p>Voluptate, voluptatibus expedita?</p>
+    </div>
+
+    <!-- 아래 두 p요소의 배경핵을 green -->
+    <p>Lorem, ipsum dolor.</p>
+    <p>A, odio quis.</p>
+</body>
+
+</html>
