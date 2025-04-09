@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 400px;
+        }
+        /* 자식 selector */
+        div>img{
+            width: 200px;
+        }
+        a>img{
+            width: 500px;
+        }
+
+        /* 자손 selector */
+        div img{
+            border: 5px solid blue;
+        }
+        div span{
+            color: gold;
+            font-size: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../html/img/독수리1.png" alt="">
+        <a href="">
+            <img src="../html/img/독수리1.png" alt="">
+        </a>
+    </div>
+
+    <!-- 아래 div 내에 있는 span 요소들의 color : gold -->
+    <div>
+        <span>Lorem, ipsum dolor.</span>
+        <h1>Lorem ipsum dolor sit. <span>Lorem.</span></h1>
+    </div>
+    <span>Lorem, ipsum dolor.</span>
+</body>
+</html>
