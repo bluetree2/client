@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* tag name selector */
+        h1{
+            background-color: red;
+            color: white;
+        }
+        h2{
+            background-color: cornflowerblue;
+            color: yellow;
+        }
+        li{
+            color: chocolate;
+        }
+        /* child selector */
+        ul > li{
+            color: blue;
+        }
+        ol > li{
+            color: skyblue;
+        }
+
+        img{
+            width: 300px;
+            
+        }
+        a>img{
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem.</h1>
+    <h1>Ab.</h1>
+    <h2>Lorem.</h2>
+    <h2>Cum.</h2>
+
+    <!-- ul>li*3>lorem1 -->
+    <ul>
+        <li>Lorem.</li>
+        <li>Tenetur.</li>
+        <li>Mollitia!</li>
+    </ul>
+    <!-- 0l>li*3>lorem1 -->
+    <ol>
+        <li>Lorem.</li>
+        <li>Deserunt.</li>
+        <li>Ipsum?</li>
+    </ol>
+    <img src="../html/img/독수리1.png" alt="">
+    <a href="https://www.naver.com">
+        <img src="../html/img/독수리1.png" alt="">
+    </a>
+        
+    <!-- table>tbody>tr>td -->
+</body>
+</html>
