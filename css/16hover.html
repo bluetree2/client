@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 500px;
+            background-color: beige;
+            /* border: 2px solid black; */
+            border-collapse: collapse;
+        }
+        th,td{
+            width: 100px;
+            height: 30px;
+
+            /* border: 1px solid black; */
+        }
+        table tbody tr:nth-child(odd) {
+            background-color: darkgray;
+        }
+        table tbody tr:hover{
+            background-color: blanchedalmond;
+            transition: all 0.2s; 
+        }
+        td:hover{
+            font-weight: 700;
+
+            /* 가변 폰트일 때만 가능 */
+            /* font-variation-settings: 'wght' 700;*/
+
+            /* filter: brightness(10); */
+            /* transition: all 0.2s; */
+        }
+    </style>
+</head>
+<body>
+    <!-- table>thead>tr>th*4^^tbody>tr*3>td*4 -->
+    <!-- table>thead>tr>th*4>lorem1^^^tbody>tr*3>td*4>lorem1 -->
+    <table>
+        <thead>
+            <tr>
+                <th>Lorem.</th>
+                <th>Aperiam.</th>
+                <th>Eaque.</th>
+                <th>Itaque?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem.</td>
+                <td>Nostrum.</td>
+                <td>Quaerat!</td>
+                <td>Soluta?</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Perspiciatis.</td>
+                <td>Nemo.</td>
+                <td>Porro.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Aliquam!</td>
+                <td>Reprehenderit!</td>
+                <td>Explicabo?</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+
+</body>
+</html>
