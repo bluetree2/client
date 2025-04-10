@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: skyblue;
+        }
+        .head{
+            background-color: beige;
+        }
+        /* 여러 클래스가 쓰일수로 우선순위 */
+        .head.note{
+            background-color: yellow;
+        }
+        #header1{
+            background-color: blue;
+        }
+        .head.note:hover{
+            background-color: orange;
+        }
+        #header1.head{
+            background-color: gold;
+        }
+
+        /* 같은 점수면 아래에 있는 것 */
+        .head{
+            background-color: beige;
+        }
+        .head{
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem.</h1>
+    <h1 class="head">Optio.</h1>
+    <h1 class="head note">Explicabo?</h1>
+    <h1 class="head note" id="header1">Numquam?</h1>
+    <h1 class="" id="">Quo?</h1>
+    <h1 class="" id="">Dolores.</h1>
+    <h1 class="" id="">Cum!</h1>
+    <h1 class="" id="">Repellendus.</h1>
+    <h1 class="" id="">Cumque.</h1>
+    <h1 class="" id="">Corporis.</h1>
+</body>
+</html>
