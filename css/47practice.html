@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nemo-button {
+            padding: 20px 17px;
+        }
+
+        .nemo-button:hover {
+            background-color: green;
+            color: white;
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 40px;
+        }
+
+        .cart-button,
+        .circle-button {
+            padding: 10px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-button {
+            margin-left: auto;
+        }
+
+        .cart-button:hover {
+            background-color: lightgray;
+        }
+
+        .circle-button {
+            background-color: green;
+            color: white;
+        }
+
+        .circle-button:hover {
+            background-color: darkgreen;
+        }
+
+        .menu-container {
+            display: flex;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .sub-container {
+            background-color: black;
+            height: 30px;
+            display: flex;
+        }
+
+        .subtit-button {
+            font-size: 13px;
+            background-color: black;
+            color: white;
+            flex: 2;
+            /* text-align: center; */
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .subtit-button:hover {
+            background-color: green;
+        }
+
+        .menu-contianer {
+            background-color: lightgray;
+            width: 200px;
+            margin: 0;
+            height: calc(100vh - 110px);
+            overflow: scroll;
+            overflow-x: hidden;
+            /* flex: 0; */
+
+        }
+
+        .menu-contianer>div {
+            padding: 0 10px;
+        }
+
+        .menu-contianer .menu-title {
+            font-size: 20px;
+            padding-top: 10px;
+        }
+
+        .menu-contianer .menu-button {
+            padding-left: 30px;
+        }
+
+        .menu-contianer .menu-button:hover {
+            color: white;
+            background-color: green;
+        }
+        .main-title{
+            padding: 10px 20px;
+        }
+        .main{
+            display: flex;
+
+            /* width: 100vw; */
+            /* width: calc(100vw - (150px + 180px - 3123x) ); */
+        }
+        .main-container{
+
+        }
+        .main-center{
+            width: calc(100vw - 400px);
+        }
+        .advertisement1 {
+            background-color: aquamarine;
+            height: 200px;
+            box-sizing: border-box;
+            /* display: flex; */
+        }
+        .advertisement2 {
+            background-color: cornflowerblue;
+            width: 200px;
+            height: 1000px;
+            margin-left: auto;
+            box-sizing: border-box;
+            align-items: end;
+            font-size: 28px;
+            /* flex: 1; */
+            
+            /* display: flex; */
+        }
+        .main-button{
+            display: flex;
+            flex: 1;
+            /* box-sizing: border-box; */
+        }
+        .main-button>#home, .main-button>#next{
+            font-size: 18px;
+            display: flex;
+            width: 70px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            background-color: green;
+            border-radius: 10px;
+        }
+        .main-button>#home:hover, .main-button>#next:hover{
+            background-color: darkgreen;
+        }
+        .main-button>#next{
+            margin-right: auto;
+        }
+        .main-button>#home{
+            margin-left: auto;
+        }
+
+        .context-title{
+            font-weight: 500;
+            font-size: 24px;
+            /* box-sizing: border-box; */
+        }
+        .main-context{
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .main-context>img{
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="menu-container">
+        <div class="logo">
+            <span>
+                w
+            </span>
+        </div>
+        <div class="nemo-button">
+            Tutorials
+        </div>
+        <div class="nemo-button">
+            Exercises
+        </div>
+        <div class="nemo-button">
+            Certificates
+        </div>
+        <div class="nemo-button">
+            Sevices
+        </div>
+        <div class="cart-button">
+            <span>
+                Get Certified
+            </span>
+        </div>
+        <div class="circle-button">
+            <span>
+                Sign-Up
+            </span>
+        </div>
+        <div class="circle-button">
+            <span>
+                Log-In
+            </span>
+        </div>
+    </div>
+    <div class="sub-container">
+        <div class="subtit-button"><span>HTML</span></div>
+        <div class="subtit-button"><span>CSS</span></div>
+        <div class="subtit-button"><span>JAVASCRIPT</span></div>
+        <div class="subtit-button"><span>SQL</span></div>
+        <div class="subtit-button"><span>PYTHON</span></div>
+        <div class="subtit-button"><span>JAVA</span></div>
+        <div class="subtit-button"><span>PHP</span></div>
+        <div class="subtit-button"><span>HOW TO</span></div>
+        <div class="subtit-button"><span>W3.CSS</span></div>
+        <div class="subtit-button"><span>C</span></div>
+    </div>
+    <!-- .menu-contianer>.menu-button*40>span{$.}>lorem1 -->
+    <div class="main">
+        <div class="menu-contianer">
+            <div class="menu-title"><span>Tutorials</span></div>
+            <div class="menu-button"><span>1.Lorem.</span></div>
+            <div class="menu-button"><span>2.Impedit.</span></div>
+            <div class="menu-button"><span>3.Rem?</span></div>
+            <div class="menu-button"><span>4.Ab.</span></div>
+            <div class="menu-button"><span>5.Optio?</span></div>
+            <div class="menu-button"><span>6.Nam.</span></div>
+            <div class="menu-button"><span>7.Eligendi?</span></div>
+            <div class="menu-button"><span>8.Impedit!</span></div>
+            <div class="menu-button"><span>9.Quo!</span></div>
+            <div class="menu-button"><span>10.Rerum?</span></div>
+            <div class="menu-button"><span>11.Quae.</span></div>
+            <div class="menu-button"><span>12.Quod.</span></div>
+            <div class="menu-button"><span>13.Obcaecati.</span></div>
+            <div class="menu-button"><span>14.Odio.</span></div>
+            <div class="menu-button"><span>15.Similique!</span></div>
+            <div class="menu-button"><span>16.Iusto.</span></div>
+            <div class="menu-button"><span>17.Laborum!</span></div>
+            <div class="menu-button"><span>18.Quaerat.</span></div>
+            <div class="menu-button"><span>19.Nesciunt.</span></div>
+            <div class="menu-button"><span>20.Excepturi.</span></div>
+            <div class="menu-button"><span>21.Voluptas!</span></div>
+            <div class="menu-button"><span>22.Sint?</span></div>
+            <div class="menu-button"><span>23.Assumenda.</span></div>
+            <div class="menu-button"><span>24.Eligendi.</span></div>
+            <div class="menu-button"><span>25.Voluptatibus.</span></div>
+            <div class="menu-button"><span>26.Asperiores.</span></div>
+            <div class="menu-button"><span>27.Sunt.</span></div>
+            <div class="menu-button"><span>28.Nam?</span></div>
+            <div class="menu-button"><span>29.Quos.</span></div>
+            <div class="menu-button"><span>30.Perspiciatis.</span></div>
+            <div class="menu-button"><span>31.Non?</span></div>
+            <div class="menu-button"><span>32.Officiis!</span></div>
+            <div class="menu-button"><span>33.Amet?</span></div>
+            <div class="menu-button"><span>34.Reprehenderit!</span></div>
+            <div class="menu-button"><span>35.Possimus.</span></div>
+            <div class="menu-button"><span>36.Impedit.</span></div>
+            <div class="menu-button"><span>37.Eligendi?</span></div>
+            <div class="menu-button"><span>38.Est?</span></div>
+            <div class="menu-button"><span>39.Quo.</span></div>
+            <div class="menu-button"><span>40.Hic.</span></div>
+        </div>
+        <div class="main-center">
+            <div class="advertisement1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum architecto, dignissimos quos mollitia voluptas repellendus nam autem sed quod voluptatibus hic temporibus odit soluta, illum numquam alias sunt, iste animi?</div>
+            <!-- .main-title>h1.title-text>{Html}^div -->
+            <div class="main-title">
+                <h1 class="title-text">HTML Tutorial</h1>
+                <div class="main-button">
+                    <div class="button" id="next">&lt; next</div>
+                    <div class="button" id="home">home &gt;</div>
+                </div>
+            </div>
+            <div class="main-context">
+                <h2 class="context-title">
+                    Easy Learning with HTML "Try it Yourself"
+                </h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, laudantium.</p>
+                <img src="../html/img/독수리1.png" alt="">
+            </div>
+        </div>
+        <div class="advertisement2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto distinctio earum eligendi ea nam voluptatibus tempore, laudantium ex, voluptatum dolores fuga necessitatibus fugiat magnam molestias delectus vero similique! Velit, minima.</div>
+    </div>
+
+</body>
+
+</html>
