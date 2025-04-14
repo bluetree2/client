@@ -73,6 +73,7 @@
         .main-content-container {
             display: flex;
             height: 100vh;
+            padding-top: 113px;
         }
 
         .side-menu {
@@ -141,11 +142,28 @@
             /* right: 20px; */
             padding-left: 30px;
         }
+        #top-container{
+            position: fixed;
+            margin-top: 0px;
+            padding: 0 10px;
+            background-color: #fff;
+            width: 100vw;
+            box-sizing: border-box;
+        }
+        #top-container2{
+            position: fixed;
+            margin-top: 58px;
+            width: calc(100vw - 15px);
+            
+        }
+        body{
+            margin: 0px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="menu-container">
+    <div class="menu-container" id="top-container" >
 
         <div class="logo">
             <span>
@@ -184,7 +202,7 @@
     </div>
 
     <!-- 두번째 상단바 -->
-    <div class="second-top-bar">
+    <div class="second-top-bar" id="top-container2">
         <div class="second-menu-item">Lorem.</div>
         <div class="second-menu-item">Voluptatibus.</div>
         <div class="second-menu-item">Maiores.</div>
@@ -196,7 +214,7 @@
     </div>
     <!-- .main-content-container>.side-manu+.main-content+.ad-container -->
     <div class="main-content-container">
-        <div class="side-menu">
+        <div class="side-menu" >
             <h1 class="side-menu-header">HTML Tutorial</h1>
             <div class="side-menu-item">Lorem.</div>
             <div class="side-menu-item">Nobis.</div>
