@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .down{
+            position: relative;
+            /* border: 1px solid block; */
+            background-color: aqua;
+            display: block;
+            width: 200px;
+            
+        }
+        .down-item:hover,.down:hover + .down-item{
+            display: block;
+            /* background-color: blue; */
+        }
+        
+        
+        .down-item{
+            display: none;
+            position: absolute;
+            top: 150px;
+            left: 8px;
+        }
+        .down-item>a{
+            display: block;
+            border: 1px solid black;
+            /* position: absolute; */
+            display: block;
+            width: 200px;
+            background-color: lightcoral;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- (h1>lorem2)+(p>lorem10)^.down>a.down-item*3 -->
+    <h1>Lorem, ipsum.</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, ab?</p>
+    <div class="down"> hover me!
+    </div>
+
+        <div class="down-item">
+            <a href="#" >one</a>
+            <a href="#" >two</a>
+            <a href="#" >three</a>
+        </div>
+</body>
+</html>
