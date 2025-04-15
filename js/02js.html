@@ -11,17 +11,13 @@
         crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- .container>.row>.col*2 -->
-    <div class="container">
-        <div class="row">
-            <div class="col d-none d-lg-block">
-                <img src="../html/img/독수리1.png" alt="" class="img-fluid">
-            </div>
-            <div class="col">
-                <h1>Lorem.</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quas minus, modi accusamus eaque veniam, aut cupiditate necessitatibus velit suscipit in deserunt vel ipsam amet pariatur hic eligendi, quam unde.</p>
-            </div>
-        </div>
-    </div>
+    <button>그림 바꾸기</button>
+    <img src="../html/img/독수리1.png" alt="">
+
+    <script>
+        document.querySelector("button").onclick = function(){
+            document.querySelector("img").src = "../html/img/고양이2.png"
+        }
+    </script>
 </body>
-</html> 
+</html>
