@@ -12,38 +12,39 @@
 </head>
 <body>
     <script>
-        function myCode() {
-            console.log("myCode의 명령문");
-
-            return function() {
-                console.log("리턴한 함수");
-            }
+        function myCode(param) {
+            // param 이 함수일 것이라고 생각하고 받음
+            let v = param();
+            console.log("----");
+            console.log(v);
             
             
         }
-
-        myCode(); //1
-        console.log("------");
-
-        // a에 함수 자체를 저장하였으나 호출안했으니 출력은 없음
-        let a = myCode; // 1 출력안됨
-
-        console.log("------");
-
-        // 함수 호출(명령문 출력), b에는 리턴된 함수 저장
-        let b = myCode(); // 1
-
-        console.log("------");
         
-        // 저장되었던 함수 출력
-        b(); // 2
-        console.log("------");
+        myCode(function() {
+            return 5;
+        })
+        myCode(function() {
+            return 10;
+        })
+        myCode(function() {
+            return "hello";
+        })
+        
+        // 
+        
+        function yourCode(param) {
+            let v = param(2);
+            console.log(v);
+        }
 
-        // mycode함수 호출, return에 있는 함수까지 호출 
-        myCode()();
-        
-        
-        
+        yourCode(function(a) {
+            return a;
+        })
+
+        yourCode(function (a) {
+            return a+a;
+        })
     </script>
 </body>
 </html>
