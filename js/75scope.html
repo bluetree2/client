@@ -12,43 +12,31 @@
 </head>
 <body>
     <script>
-
-        let count = 0;
-        while (count < 10) {
-
+        function myCode() {
             let a = 3;
             console.log(a);
-
-            count++;
-            
-        }
-
-        // console.log(a); //X
-
-        console.log(count); //ok
-
-        for (let c = 0; c < 10; c++) {
-            let b= 3;
-            console.log(b);
             
             
         }
 
-        // console.log(b); //x
-        
-        // console.log(c); // x
-        
-        let d = 0;
-        for (; d < 10; d++) {
-            // const element = array[d];
-            let e = 5;
-            console.log(e);
-            
-            
+
+        function yourCode(param) {
+            console.log(param);   
+            param = 5;
+            a = 5;
+            console.log(param);   
         }
-        console.log(d);
+
+        let a = 0;
+        console.log(a); // 0
         
+        myCode();
         
+        console.log(a); // 0
+        
+        yourCode(a);
+        
+        console.log(a); // 0
     </script>
 </body>
 </html>
