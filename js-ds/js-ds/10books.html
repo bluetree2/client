@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+     // 입력
+     let books = []; // 각 책들에 데이터를 저장하기 위한 배열
+
+     let expensiveBook = new Object();
+        expensiveBook.price = 0;
+        console.log(expensiveBook);
+        // for(let sj of sungjuks){
+        const exbook = function(book) {
+            // let grade
+            // book.ex = 0;
+            if (expensiveBook.price < book.price){
+                expensiveBook = book;
+                console.log(expensiveBook);
+                
+
+            }
+            
+            
+        };
+
+        for(let i=0;i<3;i++){
+            let book = new Object();
+            book.name = prompt("책 제목을 입력하세요");
+            book.author = prompt("책 저자을 입력하세요");
+            book.price = prompt("책 가격을 입력하세요");
+            exbook(book);
+            // book.ex;
+            // console.log(names.length);
+            // 처리
+            books.push(book);
+
+        }  
+
+        // 처리
+        
+
+        //출력
+        for(let bk of books){
+            let result = 
+            `책 제목 : ${bk.name},
+            책 저자 : ${bk.author},
+            책 가격 : ${bk.price} <br>`;
+
+            // result+= `총점 : ${sj.tot}, 
+            // 평균 : ${sj.avg.toFixed(1)}, 
+            // 학점 : ${sj.grd} <br>`
+            document.write(result)
+        }
+        document.write(`제일 비싼 책 제목 : ${expensiveBook.name},
+            제일 비싼 책 저자 : ${expensiveBook.author},
+            제일 비싼 책 가격 : ${expensiveBook.price} <br>`)
+
+        localStorage.setItem("books",JSON.stringify(books));
+    
+
+    </script>
+
+    <!-- <p><a href="10booksb.html">책데이터조회</a></p> -->
+</body>
+</html>
