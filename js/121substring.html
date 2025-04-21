@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+        // substring(slice, substr) : 시작위치(index)와 종료위치(index)를 지정하여 문자열을 추출하는 메서드
+        // 삽을 왼쪽에 넣어서 뺌
+        let a  = "javascript";
+        let b = a.substring(0,4);
+        console.log(b); // java
+        console.log(a.substring(4,8)); // script
+        // 종료 위치 생략 시 끝까지 추출
+        console.log(a.substring(4)); // script
+        console.log(a.substring(4,100)); // script
+        
+
+        // 연습
+        // 콤마를 기준으로 두번째 위치에 있는 문자를 출력하는 프로그램
+        let c = ["java,spring,boot","python,django,ai","javascript,node,net","html,react,vue","jsp,servlet,thymeleaf"];
+        // for (let i = 0; i < c.length; i++) {
+        let d = c.map(i => {
+            // 첫번째 콤마 위치
+            let firstcomma = i.indexOf(",")+1;
+            // 두번째 콤마 위치
+            let secondcomma = i.indexOf(",",firstcomma);
+            // 두번째 콤마 위치에 있는 문자 출력
+            let d = i.substring(firstcomma,secondcomma);
+            // 출력,리턴
+            console.log(d);
+            return d;
+            
+        });
+
+        console.log(d);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
