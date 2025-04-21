@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적처리프로그램</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>성적 처리 프로그램</h1>
+    <script>
+        // 간단한 경고 대화상자 출력
+        // alert('hello');
+
+        // 간단한 입력 대화상자 출력
+        // let sayhello = prompt('인사말 입력');
+        // document.write(sayhello);
+        // console.log(sayhello);
+        
+    </script>
+
+    <script>
+        // 입력 - 이름,국어,영어,수학
+        let name = prompt("이름을 입력하세요");
+        let korean = prompt("국어점수을 입력하세요");
+        let english = prompt("영어점수을 입력하세요");
+        let math = prompt("수학점수을 입력하세요");
+        
+        // 처리
+        let total = +korean + +english + +math;
+        let avg = +total/3;
+        console.log(avg);
+
+        let grade;
+        if (avg >= 90) {
+                grade = "A";
+             }else if (avg >= 80) {
+                grade = "B";
+             }else if (avg >= 70) {
+                grade = "C";
+             }else if (avg >= 60) {
+                grade = "D";
+             }else if (avg < 60) {
+                grade = "F";
+             }
+             else{
+                grade = "error";
+             }
+
+        // 출력
+        document.write(`이름 : ${name} <br>`)
+        document.write(`국어 : ${korean} <br>`)
+        document.write(`영어 : ${english} <br>`)
+        document.write(`수학 : ${math} <br>`)
+        document.write(`총점 : ${total} <br>`)
+        document.write(`평균 : ${avg.toFixed(1)} <br>`)
+        document.write(`학점 : ${grade} <br>`)
+    </script>
+</body>
+</html>

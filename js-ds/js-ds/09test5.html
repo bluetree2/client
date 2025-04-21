@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta names="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적처리프로그램</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>성적 처리프로그램</h1>
+    <p>직렬화 serialization</p>
+    <p>자바 스크립트 배열이나 객체 같은 데이터를 문자열로 변환하는 과정</p>
+    <p>JSON.stringfy()를 이용해서 객체/배열을 문자열로 변환 가능</p>
+    <p>문자열로 변환된 객체/배열을 원래 하나의 형식으로 바꾸려면
+         JSON.parse()를 사용 (역직렬화)</p>
+
+
+    <script>
+        // 입력
+        let sungjuks = []; // 각 학생에 대한 성적데이터를 저장하기 위한 배열
+        
+          
+
+        // for(let sj of sungjuks){
+        const getGrade = (sj) => {
+            // let grade
+            if (sj.avgs >= 90) {sj.grd = "A";}
+            else if (sj.avg >= 80) {sj.grd = "B";}
+            else if (sj.avg >= 70) {sj.grd = "C";}
+            else if (sj.avg >= 60) {sj.grd = "D";}
+            else if (sj.avg < 60) {sj.grd = "F";}
+            else{sj.grd = "error";}
+            console.log(sj.grd);
+            
+        };
+
+        for(let i=0;i<3;i++){
+            let sungjuk = new Object();
+            sungjuk.name = prompt("이름을 입력하세요");
+            sungjuk.korean = +prompt("국어점수을 입력하세요");
+            sungjuk.english = +prompt("영어점수을 입력하세요");
+            sungjuk.math = +prompt("수학점수을 입력하세요");
+            // console.log(names.length);
+            // 처리
+            sungjuk.tot = sungjuk.korean + sungjuk.english + sungjuk.math;
+            sungjuk.avg = sungjuk.tot / 3;
+            // console.log(sungjuk.avg);
+            getGrade(sungjuk)
+            console.log(sungjuk);
+            // 처리된 성적데이터를 배열에 저장
+            sungjuks.push(sungjuk);
+
+        }  
+
+        // 처리
+        // let total = [];
+        // let avg = [];
+        // let grade = [];
+        
+        //출력
+        for(let sj of sungjuks){
+            let result = 
+            `이름 : ${sj.name},
+            국어 : ${sj.korean},
+            영어 : ${sj.english},
+            수학 : ${sj.math} <br>`;
+
+            result+= `총점 : ${sj.tot}, 
+            평균 : ${sj.avg.toFixed(1)}, 
+            학점 : ${sj.grd} <br>`
+            document.write(result)
+        }
+
+        localStorage.setItem("sungjuks",JSON.stringify(sungjuks));
+    
+
+    </script>
+
+    <p><a href="09test5b.html">성적데이터조회</a></p>
+</body>
+</html>

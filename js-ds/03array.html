@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열열</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>배열</h1>
+    <p>배열은 대괄호로 생성</p>
+    <p>배열의 인덱스는 0부터 시작</p>
+    <p>다양한 자료형을 배열로 선언 가능(숫자,문자열,객체)</p>
+    <p>push, pop,foreach, mep, filter 등의 매서드 제공</p>
+    <script>
+        // 배열 생성 방법
+        // 리터럴
+        let fruits = ['apple','banana','peach','orange'];
+
+        // array 생성자
+        // 변수명을 지을 때 배열이면 s를 붙여서 복수형으로 쓰면 좋다
+        let menus = new Array ('김밥','자장면','돈까스','라면')
+
+        // 배열 접근 : ,변수명[위치값]
+        // 배열 크기(갯수) : 변수명.length
+        console.log(menus[0]);
+        console.log(menus[1]);
+        console.log(menus[2]);
+        console.log(menus[3]);
+        console.log(menus.length);
+        console.log("------------");
+        
+        // 배열 순회 : 전통적 방식 
+        for(let i =0;i<=3;++i){
+            console.log(menus[i]);
+        } 
+        console.log("------------");
+        // 배열 순회 : foreach(처리함수), 함수형 스타일, 추천! 
+        // 실무에서 많이 씀
+        fruits.forEach((fruits,idx) => {console.log(idx,fruits)});
+
+        console.log("------------");
+        // 배열 순회 : for..of
+        for(let menu of menus){
+            console.log(menu);
+        }
+
+         // 배열 순회 : for..in : 배열의 인덱스 활용
+         for(let idx in fruits){
+            console.log(idx, fruits[idx]);
+        }
+
+        // crud
+        // c: create
+        // r: read
+        // u: update
+        // d: delete
+
+    </script>
+</body>
+</html>
