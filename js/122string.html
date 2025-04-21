@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+        // split() : 특정 문자열을 기준으로 배열로 반환하는 메서드
+        let a = "java,spring,boot,python,django,ai,javascript,node,net,html,react,vue,jsp,servlet,thymeleaf";
+
+        let b = a.split(",");
+        console.log(b);
+
+        let b2 = a.split(",",3);
+        console.log(b2);
+
+        let c = "spring, java, boot, css, react"
+        let d = c.split(",");
+        console.log(d);
+        
+        let e = c.split(", ");
+        console.log(e);
+
+        // 개인연습
+        // 공백을 지우고 split 함수로 나누기
+        let e2 = c.trim().split(",");
+        console.log(e2);
+
+        let f = "spring, java, boot ,css,react"
+        let g = f.split(/\s*,\s*/);  //regular expression (정규표현식)
+        console.log(g);
+
+        let h = "spring";
+        let i = h.split("");
+        console.log(i);
+
+        let j = ["java,spring,boot","spring,django,ai","javascript,node,net","html,react,vue","jsp,servlet,thymeleaf"];
+
+        // 두번째 단어들로만 구성된 배열 출력
+        let k = j.map(i=>{
+            let splitWord = i.split(",");
+            console.log(splitWord[1]);
+            return splitWord[1];
+        });
+        console.log(k);
+
+        // 축약(return 생략가능, console.log 생략)
+        let l = j.map(i=> i.split(",")[1]);
+        console.log(l);
+        
+        
+        
+    </script>
+</body>
+</html>
