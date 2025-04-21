@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+    <script>
+        // includes : 문자열에 특정 문자열이 포함되어 있는지 확인
+        // 포함되어 있으면 true, 포함되어 있지 않으면 false 리턴
+        // contains 메서드와 동일한 기능이나 혼동 주의
+        let a = "I' am donald trump";
+        let r1 = a.includes("elon");
+        console.log(r1); //false
+        console.log(a.includes("donald")); //true
+        console.log(a.includes("trump")); //true
+        console.log(a.includes("rum")); //true
+        console.log(a.includes("Rum")); //false
+
+        // toUpperCase : 문자열을 대문자로 변환
+        // toLowerCase : 문자열을 소문자로 변환
+        let r2 = a.toUpperCase();
+        console.log(r2); //"I'M AM DONALD TRUMP"
+        let r3 = a.toLowerCase();
+        console.log(r3); //"i'm a donald trump"
+
+        // 연습
+        let b = "I'm Elon Musk";
+        // elon ,Elon ,ELON 모두 true
+        // 코드 작성
+        let r4 = b.toLocaleLowerCase();
+        r4.includes("elon");
+        console.log(r4); //true
+
+
+        // 연습
+        
+
+
+        
+        
+    </script>
+</body>
+</html>

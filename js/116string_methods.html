@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods Examples</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>String Methods Examples</h1>
+        <script>
+            // 기본 문자열
+            let str = "Hello World";
+            console.log("원본 문자열:", str);
+
+            // 1. 문자열 검색 메서드
+            console.log("\n1. 문자열 검색 메서드");
+            console.log("indexOf('World'):", str.indexOf("World")); // 6
+            console.log("lastIndexOf('l'):", str.lastIndexOf("l")); // 9
+            console.log("includes('Hello'):", str.includes("Hello")); // true
+            console.log("startsWith('Hello'):", str.startsWith("Hello")); // true
+            console.log("endsWith('World'):", str.endsWith("World")); // true
+
+            // 2. 문자열 추출 메서드
+            console.log("\n2. 문자열 추출 메서드");
+            console.log("slice(0, 5):", str.slice(0, 5)); // "Hello"
+            console.log("substring(6, 11):", str.substring(6, 11)); // "World"
+            console.log("substr(6, 5):", str.substr(6, 5)); // "World"
+            console.log("charAt(1):", str.charAt(1)); // "e"
+
+            // 3. 문자열 변환 메서드
+            console.log("\n3. 문자열 변환 메서드");
+            console.log("toUpperCase():", str.toUpperCase()); // "HELLO WORLD"
+            console.log("toLowerCase():", str.toLowerCase()); // "hello world"
+            console.log("trim():", "  Hello  ".trim()); // "Hello"
+            console.log("replace('World', 'JavaScript'):", str.replace("World", "JavaScript")); // "Hello JavaScript"
+
+            // 4. 문자열 분할 및 결합 메서드
+            console.log("\n4. 문자열 분할 및 결합 메서드");
+            console.log("split(' '):", str.split(" ")); // ["Hello", "World"]
+            console.log("concat('!', '!'):", str.concat("!", "!")); // "Hello World!!"
+
+            // 5. 문자열 검사 메서드
+            console.log("\n5. 문자열 검사 메서드");
+            console.log("length:", str.length); // 11
+            console.log("match(/[A-Z]/g):", str.match(/[A-Z]/g)); // ["H", "W"]
+            console.log("search('World'):", str.search("World")); // 6
+
+            // 6. 문자열 반복 및 채우기 메서드
+            console.log("\n6. 문자열 반복 및 채우기 메서드");
+            console.log("'Hello'.repeat(2):", "Hello".repeat(2)); // "HelloHello"
+            console.log("'5'.padStart(3, '0'):", "5".padStart(3, "0")); // "005"
+            console.log("'5'.padEnd(3, '0'):", "5".padEnd(3, "0")); // "500"
+
+            // 7. 문자열 비교 메서드
+            console.log("\n7. 문자열 비교 메서드");
+            let str1 = "apple";
+            let str2 = "banana";
+            console.log("'apple'.localeCompare('banana'):", str1.localeCompare(str2)); // -1
+
+            // 8. 템플릿 리터럴 (ES6)
+            console.log("\n8. 템플릿 리터럴");
+            let name = "John";
+            let age = 30;
+            console.log(`My name is ${name} and I am ${age} years old.`);
+        </script>
+    </div>
+</body>
+</html> 
