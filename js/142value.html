@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <input type="text" id="input1"> <button id="btn1">클릭</button>
+    <input type="text" id="input2"> <button id="btn2">클릭</button>
+    <input type="text" id="input3"> <button id="btn3">클릭</button>
+    <input type="text" id="input4"> <button id="btn4">클릭</button>
+    <input type="text" id="input5"> <button id="btn5">클릭</button>
+    <script>
+        let i1 = document.getElementById("input1");
+        let i2 = document.getElementById("input2");
+        let i3 = document.getElementById("input3");
+        let i4 = document.getElementById("input4");
+        let i5 = document.getElementById("input5");
+        let b1 = document.getElementById("btn1");
+        let b2 = document.getElementById("btn2");
+        let b3 = document.getElementById("btn3");
+        let b4 = document.getElementById("btn4");
+        let b5 = document.getElementById("btn5");
+
+
+        document.getElementById("btn1").addEventListener("click", () => {
+            let v1 = i1.value;
+            console.log(v1);
+        });
+        
+        // 두번째 버튼 클릭 시 두번째 input 요소에 입력된 값을 콘솔에 출력
+        b2.addEventListener("click", () => console.log(i2.value));
+        
+        // 세번째 버튼 클릭 시 세번째 input 요소에 입력된 값을 변경
+        b3.addEventListener("click", () => {
+            i3.value = "다른 값으로 변경";
+        });
+        
+        // 네번째 버튼 클릭 시 네번째 input 요소에 입력된 값이 5번째 input 요소의 값이 되도록 코드 작성
+        b4.addEventListener("click", () => i5.value = i4.value);
+        
+
+
+
+    </script>
+</body>
+</html>
