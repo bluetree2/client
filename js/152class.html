@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    .done {
+        text-decoration: line-through;
+        color: red;
+    }
+</style>
+
+<body>
+    <!-- input#input+button#btn{+}+hr+ul#list1 -->
+    <input type="text" id="input">
+    <button id="btn">+</button>
+    <hr>
+    <ul id="list1">
+
+    </ul>
+    <script>
+        let addbtn = document.getElementById("btn");
+        let i1 = document.getElementById("input");
+        let list = document.getElementById("list1");
+
+        addbtn.addEventListener("click", () => {
+            let li = document.createElement("li");
+
+            // 비슷한 변수 선언 시  map를 활용하여 코드 간결화 가능
+            let [btn1, btn2] = ["완료", "삭제"].map(text => {
+                let btn = document.createElement("button");
+                btn.textContent = text;
+                return btn;
+            });
+
+            li.append(i1.value," ",btn1, " ",btn2);
+            list.append(li);
+            btn1.addEventListener("click", function () {
+                btn1.parentElement.classList.toggle("done");
+                btn1.textContent = btn1.parentElement.classList.contains("done") ? "취소" : "완료";
+
+            });
+            btn2.addEventListener("click", () => btn2.parentElement.remove());
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>
