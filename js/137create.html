@@ -23,22 +23,15 @@
         let btn4 = document.querySelector("#btn4");
         let box = document.querySelector("#box");
 
-        btn1.addEventListener("click", () => {
-            let p = document.createElement("p");
-            box.append(p);
-        });
-        btn1.addEventListener("click", () => {
-            let p = document.createElement("p");
-            box.prepend(p);
-        });
-        btn1.addEventListener("click", () => {
-            let p = document.createElement("p");
-            box.after(p);
-        });
-        btn1.addEventListener("click", () => {
-            let p = document.createElement("p");
-            box.before(p);
-        });
+        // btn1.addEventListener("click", () => {
+        //     let p = document.createElement("p");
+        //     box.append(p);
+        // });
+        btn1.addEventListener("click", () => box.append(document.createElement("p")));
+        btn2.addEventListener("click", () => box.prepend(document.createElement("p")));
+        btn3.addEventListener("click", () => box.after(document.createElement("p")));
+        btn4.addEventListener("click", () => box.before(document.createElement("p")));
+
         
     </script>
 </body>
