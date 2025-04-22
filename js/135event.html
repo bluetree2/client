@@ -11,8 +11,26 @@
         crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- button#btn$*3{$} -->
+    <button id="btn1" onclick="console.log('hi')">1</button>
+    <button id="btn2" onclick="func1()">2</button>
+    <button id="btn3" onclick="func2()">3</button>
     <script>
-        
+        // onclick property
+        // addEventListner 함수
+        // onclick attribute
+
+        function func1() {
+            console.log("여러 줄 함수1");
+            console.log("여러 줄 함수2");
+        }
+
+        // 세번째 버튼 클릭시  "hello" 출력 되도록 코드 작성
+        // onclick attribute 활용
+        function func2() {
+            console.log("hello");
+        }
+
     </script>
 </body>
 </html>
