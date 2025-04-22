@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <button id="btn1">추가</button>
+    <div id="box"></div>
+    <script>
+        let btn = document.querySelector("#btn1");
+        let box = document.querySelector("#box");
+
+        btn.addEventListener("click", () => {
+            let p = document.createElement("p");
+            p.innerHTML = Math.floor(Math.random()*10); //0~9 사이의 임의의 수
+
+            let btn1 = document.createElement("button");
+            // 버튼에 '삭제' 텍스트 추가
+            btn1.textContent = "삭제";
+            // btn 생성 시 addEventListener 값이 들어가서 버튼 클릭 시 삭제
+            btn1.addEventListener("click", () => p.remove());
+            p.append(btn1)
+            box.append(p);
+        });
+
+    </script>
+</body>
+</html>
