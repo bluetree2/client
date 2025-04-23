@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+       crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+    <!-- .container>.row>.col>h1{TODO LIST} -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- .d-flex.justify-content-center.align-items-center -->
+                <div class="d-flex justify-content-center align-items-center py-5"></div>
+                <h1>TODO LIST</h1>
+            </div>
+        </div>
+    </div>
+    <!-- .row>.col>[type="text"] -->
+    <div class="row">
+       <div class="col">
+        <!-- .input-group>input#input1.form-control+button#btn1.btn.btn-outline-secondary -->
+        <div class="input-group">
+            <input type="text" id="input1" class="form-control">
+            <button id="btn1" class="btn btn-outline-secondary">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+       </div>
+    </div>
+
+    <!-- .contianer>.row>.col -->
+    <div class="contianer mt-4">
+        <div class="row">
+            <div class="col">
+                <ul id="list1" class="list-group">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        // 여러 요소에 사용될 아이디 번호
+        let globalIdNum = 0;
+
+
+        // + 클릭하면 
+        document.getElementById("btn1").addEventListener("click", function(){
+            globalIdNum ++;
+            let idNum = globalIdNum;
+            // input에 있는 value를 읽어서
+            let input1 = document.getElementById("input1");
+            let value = input1.value;
+            // input1의 value 초기화
+            input1.value = "";
+            
+            // 새 li만들어서 
+            // let li = document.createElement("li");
+            // let div1 = document.createElement("div");
+            // div1.textContent = value;
+            // li.append(div1);
+            // li.className = "list-group-item d-flex justify-content-between";
+            
+            let li  = document.createElement("li");
+            li.className = "list-group-item d-flex justify-content-between";
+            li.innerHTML = `
+            <div id=todo-text-${idNum}>${value}</div>
+                <div>
+                    <div class="d-flex gap-2">
+                        <button id="done-btn-${idNum}"class="btn btn-outline-info btn-sm">
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+                        <button id="remove-btn-${idNum}"class="btn btn-outline-danger btn-sm">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                        </div>
+                </div>
+    `
+ 
+            // ul에 붙이기
+            let list1 = document.getElementById("list1");
+            list1.append(li);
+
+            // dom에 있는  done-btn-1버튼에 click event 함수 추가하기
+            let donBtn = document.getElementById(`done-btn-${idNum}`);
+            donBtn.addEventListener("click", function(){
+                // 텍스트가 있는 요소에
+                let todoText = document.getElementById(`todo-text-${idNum}`);
+                // text-decoration-line-through 추가 / 삭제
+                todoText.classList.toggle("text-decoration-line-through");
+                // text-decoration-line-through 가 있으면
+                if(todoText.classList.contains("text-decoration-line-through")){
+                    // 버튼 내용을 back아이콘으로,
+                    // 버튼색 secondary
+                    donBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+                    todoText.classList.add("btn-outline-secondary");
+                    todoText.classList.remove("btn-outline-info");
+                }else{
+                    
+                    // 없으면 check 아이콘으로,
+                    donBtn.innerHTML = `<i class="fa-solid fa-check"></i>`;
+                    // 버튼색 info
+                    todoText.classList.add("btn-outline-info");
+                    todoText.classList.remove("btn-outline-secondary");
+                }   
+            });
+            
+            // remove-btn-$ 버튼을 클리거하면
+            let removeBtn = document.getElementById(`remove-btn-${idNum}`);
+            removeBtn.addEventListener("click", function(){
+                // li 요소 삭제
+                let todoText = document.getElementById(`todo-text-${idNum}`);
+                // let li = document.getElementById(`todo-text-${idNum}`);
+                li.remove();
+            });
+
+        });
+    </script>
+</body>
+</html>

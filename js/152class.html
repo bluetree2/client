@@ -28,7 +28,7 @@
     </ul>
     <script>
         let addbtn = document.getElementById("btn");
-        let i1 = document.getElementById("input");
+        let input1 = document.getElementById("input");
         let list = document.getElementById("list1");
 
         addbtn.addEventListener("click", () => {
@@ -41,7 +41,7 @@
                 return btn;
             });
 
-            li.append(i1.value," ",btn1, " ",btn2);
+            li.append(input1.value," ",btn1, " ",btn2);
             list.append(li);
             btn1.addEventListener("click", function () {
                 btn1.parentElement.classList.toggle("done");
